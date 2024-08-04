@@ -1,5 +1,6 @@
 import { useRive } from '@rive-app/react-canvas';
 import Link from 'next/link';
+import TransitionLink from './TransitionLink';
 
 export const DeskAnim = () => {
     const { RiveComponent, rive } = useRive({
@@ -17,22 +18,38 @@ export const DeskAnim = () => {
 
     function Up_LMonitor() {
         // onHoverLeftInput.value = true;
-        rive.setBooleanStateAtPath(Input_HOVER_L, true, "LEFT")
+        if(rive != null) {
+            rive.setBooleanStateAtPath(Input_HOVER_L, true, "LEFT");
+        } else {
+            console.error("rive object is null",)
+        }
     }
 
     function Down_LMonitor() {
         // onHoverLeftInput.value = false;
-        rive.setBooleanStateAtPath(Input_HOVER_L, false, "LEFT")
+        if(rive != null) {
+            rive.setBooleanStateAtPath(Input_HOVER_L, false, "LEFT");
+        } else {
+            console.error("rive object is null",)
+        }
     }
 
     function Up_RMonitor() {
         // onHoverLeftInput.value = true;
-        rive.setBooleanStateAtPath(Input_HOVER_R, true, "RIGHT")
+        if(rive != null) {
+            rive.setBooleanStateAtPath(Input_HOVER_R, true, "RIGHT");
+        } else {
+            console.error("rive object is null",)
+        }
     }
 
     function Down_RMonitor() {
         // onHoverLeftInput.value = false;
-        rive.setBooleanStateAtPath(Input_HOVER_R, false, "RIGHT")
+        if(rive != null) { 
+            rive.setBooleanStateAtPath(Input_HOVER_R, false, "RIGHT");
+        } else {
+            console.error("rive object is null",)
+        }
     }
 
     return (
@@ -47,11 +64,12 @@ export const DeskAnim = () => {
                 onMouseLeave={Down_LMonitor}
                 href="/work">
             </Link>
-            <a className='absolute top-[13%] left-[50%] h-[25%] w-[42%] bg-green-800 bg-opacity-0'
-                onMouseEnter={Up_RMonitor}
-                onMouseLeave={Down_RMonitor}
-                href="/work">
-            </a>
+            <TransitionLink href='/work'>
+                <div className='absolute top-[13%] left-[50%] h-[25%] w-[42%] bg-green-800 bg-opacity-0'
+                    onMouseEnter={Up_RMonitor}
+                    onMouseLeave={Down_RMonitor}>
+                </div>
+            </TransitionLink>
             <div className='fixed bg-green-900 w-5/6 bottom-[13vh] -z-10 h-1'></div>
         </div>
     );

@@ -17,11 +17,15 @@ export const GameTVAnim = () => {
   const HoverTVSMInput = useStateMachineInput(rive, "State Machine 1", Input_HOVER);
 
   function TurnOnTV() {
-    HoverTVSMInput.value = true;
+    if (HoverTVSMInput != null) {
+      HoverTVSMInput.value = true;
+    }
   }
 
   function TurnOffTV() {
-    HoverTVSMInput.value = false;
+    if (HoverTVSMInput != null) {
+      HoverTVSMInput.value = false;
+    }
   }
 
 
