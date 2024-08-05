@@ -1,7 +1,7 @@
-import { PortfolioProject } from "./PortfolioProject"
+import { PortfolioProject } from "../models/ProjectModel"
 
 
-export const ProjectDisplay = (props: {project: PortfolioProject}) => {
+export const ProjectDisplay: React.FC<{project: PortfolioProject}> = (props) => {
 
     const portProject: PortfolioProject = props.project;
     return (

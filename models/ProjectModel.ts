@@ -1,5 +1,5 @@
 
-export class PortfolioProject {
+class ProjectModel {
     name: string;
     imgUrl: string;
     desc: string;
@@ -12,3 +12,5 @@ export class PortfolioProject {
         this.type = projType;
     }
 };
+
+export default ProjectModel;
