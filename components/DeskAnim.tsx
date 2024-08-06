@@ -1,6 +1,7 @@
 import { useRive } from '@rive-app/react-canvas';
 import Link from 'next/link';
 import TransitionLink from './TransitionLink';
+import { useEffect } from 'react';
 
 export const DeskAnim = () => {
     const { RiveComponent, rive } = useRive({
@@ -16,6 +17,7 @@ export const DeskAnim = () => {
     const Input_HOVER_L = 'HoverL';
     const Input_HOVER_R = 'HoverR';
 
+    
     function Up_LMonitor() {
         // onHoverLeftInput.value = true;
         if(rive != null) {
@@ -24,7 +26,7 @@ export const DeskAnim = () => {
             console.error("rive object is null",)
         }
     }
-
+    
     function Down_LMonitor() {
         // onHoverLeftInput.value = false;
         if(rive != null) {
@@ -33,7 +35,7 @@ export const DeskAnim = () => {
             console.error("rive object is null",)
         }
     }
-
+    
     function Up_RMonitor() {
         // onHoverLeftInput.value = true;
         if(rive != null) {
@@ -42,7 +44,7 @@ export const DeskAnim = () => {
             console.error("rive object is null",)
         }
     }
-
+    
     function Down_RMonitor() {
         // onHoverLeftInput.value = false;
         if(rive != null) { 
@@ -52,25 +54,46 @@ export const DeskAnim = () => {
         }
     }
 
+    useEffect(()=> {
+        if(rive){
+            setTimeout(() => {
+                Up_LMonitor();
+                console.log("up left")
+            }, 500);
+            setTimeout(() => {
+                Down_LMonitor();
+                console.log("down left")
+            }, 1000);
+            setTimeout(() => {
+                Up_RMonitor();
+                console.log("up right")
+            }, 600);
+            setTimeout(() => {
+                Down_RMonitor();
+                console.log("down right")
+            }, 1100);
+        }
+    }, [rive]);
+    
+
     return (
-        <div className='canvas-wrapper bottom-0 absolute w-[90%] left-[-115%]'>
+        <div className='canvas-wrapper -bottom-10 absolute w-[90%] left-[-130%]'>
             <RiveComponent
                 role="img"
                 aria-label="Desk Animation"
-                className='relative w-[120%]'
+                className='relative w-[140%]'
             />
-            <Link className='absolute top-[13%] left-[2%] h-[25%] w-[42%] bg-blue-800 bg-opacity-0'
+            <Link className='absolute top-[12%] left-[2%] h-[24%] w-[50%] bg-blue-800 bg-opacity-0 transition hover:translate-y-[-30%]'
                 onMouseEnter={Up_LMonitor}
                 onMouseLeave={Down_LMonitor}
                 href="/work">
             </Link>
             <TransitionLink href='/work'>
-                <div className='absolute top-[13%] left-[50%] h-[25%] w-[42%] bg-green-800 bg-opacity-0'
+                <div className='absolute top-[12%] left-[57%] h-[24%] w-[50%] bg-green-800 bg-opacity-0 transition hover:translate-y-[-30%]'
                     onMouseEnter={Up_RMonitor}
                     onMouseLeave={Down_RMonitor}>
                 </div>
             </TransitionLink>
-            <div className='fixed bg-green-900 w-5/6 bottom-[13vh] -z-10 h-1'></div>
         </div>
     );
 

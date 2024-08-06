@@ -21,11 +21,12 @@ export default function Home() {
     { scope: container }
   );
 
+  
 
   return (
     <div>
-      <div className='ml-auto mr-auto -z-50'>
-        <div className='relative text-center text-green-600 top-20 text-[15vw] leading-none font-anton_display font-extrabold'>
+      <div className='ml-auto mr-auto'>
+        <div className='fixed text-center text-green-600 bottom-[30%] left-0 right-0 -z-20 text-[15vw] leading-none font-anton_display font-extrabold'>
           <div className='firstname'>CADE</div>
           <div className='lastname'>CONNER</div>
         </div>
@@ -36,6 +37,7 @@ export default function Home() {
           <GameTVAnim />
         </div>
       </div>
+      <div className='fixed bg-green-900 w-5/6 left-[10%] bottom-[12vh] -z-10 h-1'></div>
     </div>
   );
 }

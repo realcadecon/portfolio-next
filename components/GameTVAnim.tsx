@@ -1,5 +1,6 @@
 import { useRive, useStateMachineInput } from '@rive-app/react-canvas';
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 export const GameTVAnim = () => {
   const Input_HOVER = 'HoverTV';
@@ -27,6 +28,19 @@ export const GameTVAnim = () => {
       HoverTVSMInput.value = false;
     }
   }
+
+  useEffect(() => {
+    if (HoverTVSMInput) {
+      setTimeout(() => {
+        TurnOnTV();
+        console.log("tv on")
+      }, 500);
+      setTimeout(() => {
+        TurnOffTV();
+        console.log("tv off")
+      }, 3000);
+    }
+  }, [HoverTVSMInput]);
 
 
   return (
