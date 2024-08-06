@@ -7,15 +7,13 @@ import { useEffect, useState } from "react";
 import { getProjectInformation } from "@/utils/queries";
 import ProjectType from "@/models/ProjectType";
 
-export default function Work (type?: ProjectType) {
+export default function Work () {
 
     const [portProjs, setPortProjs] = useState<ProjectModel[]>([]);
     const [dbError, setDBError] = useState("");
     const [projFilter, setProjFilter] = useState<ProjectType>(ProjectType.All);
 
     useEffect(() => {
-        console.log("filter = " + type);
-
         const fetchProjects = async () => {
             const projects: any = await getProjectInformation({ type: ProjectType.Work });
             console.log(projects)
