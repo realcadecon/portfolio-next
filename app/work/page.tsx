@@ -7,9 +7,7 @@ import { useEffect, useState } from "react";
 import { getProjectInformation } from "@/utils/queries";
 import ProjectType from "@/models/ProjectType";
 
-
-
-export const Work = (type?: ProjectType) => {
+export default function Work (type?: ProjectType) {
 
     const [portProjs, setPortProjs] = useState<ProjectModel[]>([]);
     const [dbError, setDBError] = useState("");
@@ -45,5 +43,3 @@ export const Work = (type?: ProjectType) => {
         </div>
     )
 }
-
-export default Work;
