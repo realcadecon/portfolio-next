@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { getProjectInformation } from "@/utils/queries";
 import ProjectType from "@/models/ProjectType";
+import TransitionLink from "@/components/TransitionLink";
 
 export default function Work() {
 
@@ -31,8 +32,8 @@ export default function Work() {
         <div>
             My Work Display
             <br />
-            <Link href="/">Back to Home</Link>
-            <div className="grid grid-cols-3 grid-flow-row mx-auto">
+            <TransitionLink href="/">Back to Home</TransitionLink>
+            <div className="grid md:grid-cols-2 grid-flow-row mx-auto">
                 {portProjs.map(proj =>
                     <ProjectDisplay project={proj} key={proj.name} />
                 )}

@@ -1,6 +1,7 @@
 import { useRive, useStateMachineInput } from '@rive-app/react-canvas';
 import Link from 'next/link';
 import { useEffect } from 'react';
+import TransitionLink from './TransitionLink';
 
 export const GameTVAnim = () => {
   const Input_HOVER = 'HoverTV';
@@ -44,17 +45,18 @@ export const GameTVAnim = () => {
 
 
   return (
-    <div className='canvas-wrapper bottom-0 absolute w-[90%] right-[-115%]'>
+    <div className='canvas-wrapper -bottom-8 absolute w-[90%] right-[-115%]'>
       <RiveComponent
         role="img"
         aria-label="Gaming"
         className='relative w-[120%]'
       />
-      <Link className='absolute top-[15%] right-[20%] h-[40%] w-[58%] bg-blue-800 bg-opacity-0'
-        onMouseEnter={TurnOnTV}
-        onMouseLeave={TurnOffTV}
-        href='/work'>
-      </Link>
+      <TransitionLink href='/work'>
+        <div className='absolute top-[15%] right-[20%] h-[40%] w-[58%] bg-blue-800 bg-opacity-0'
+          onMouseEnter={TurnOnTV}
+          onMouseLeave={TurnOffTV}>
+        </div>
+      </TransitionLink>
     </div>
   );
 

@@ -17,45 +17,45 @@ export const DeskAnim = () => {
     const Input_HOVER_L = 'HoverL';
     const Input_HOVER_R = 'HoverR';
 
-    
+
     function Up_LMonitor() {
         // onHoverLeftInput.value = true;
-        if(rive != null) {
+        if (rive != null) {
             rive.setBooleanStateAtPath(Input_HOVER_L, true, "LEFT");
         } else {
             console.error("rive object is null",)
         }
     }
-    
+
     function Down_LMonitor() {
         // onHoverLeftInput.value = false;
-        if(rive != null) {
+        if (rive != null) {
             rive.setBooleanStateAtPath(Input_HOVER_L, false, "LEFT");
         } else {
             console.error("rive object is null",)
         }
     }
-    
+
     function Up_RMonitor() {
         // onHoverLeftInput.value = true;
-        if(rive != null) {
+        if (rive != null) {
             rive.setBooleanStateAtPath(Input_HOVER_R, true, "RIGHT");
         } else {
             console.error("rive object is null",)
         }
     }
-    
+
     function Down_RMonitor() {
         // onHoverLeftInput.value = false;
-        if(rive != null) { 
+        if (rive != null) {
             rive.setBooleanStateAtPath(Input_HOVER_R, false, "RIGHT");
         } else {
             console.error("rive object is null",)
         }
     }
 
-    useEffect(()=> {
-        if(rive){
+    useEffect(() => {
+        if (rive) {
             setTimeout(() => {
                 Up_LMonitor();
                 console.log("up left")
@@ -74,7 +74,7 @@ export const DeskAnim = () => {
             }, 1100);
         }
     }, [rive]);
-    
+
 
     return (
         <div className='canvas-wrapper -bottom-10 absolute w-[90%] left-[-130%]'>
@@ -83,11 +83,12 @@ export const DeskAnim = () => {
                 aria-label="Desk Animation"
                 className='relative w-[140%]'
             />
-            <Link className='absolute top-[12%] left-[2%] h-[24%] w-[50%] bg-blue-800 bg-opacity-0 transition hover:translate-y-[-30%]'
-                onMouseEnter={Up_LMonitor}
-                onMouseLeave={Down_LMonitor}
-                href="/work">
-            </Link>
+            <TransitionLink href='/work'>
+                <div className='absolute top-[12%] left-[2%] h-[24%] w-[50%] bg-blue-800 bg-opacity-0 transition hover:translate-y-[-30%]'
+                    onMouseEnter={Up_LMonitor}
+                    onMouseLeave={Down_LMonitor}>
+                </div>
+            </TransitionLink>
             <TransitionLink href='/work'>
                 <div className='absolute top-[12%] left-[57%] h-[24%] w-[50%] bg-green-800 bg-opacity-0 transition hover:translate-y-[-30%]'
                     onMouseEnter={Up_RMonitor}
