@@ -3,13 +3,32 @@
 import { ProjectDisplay } from "@/components/ProjectDisplay";
 import ProjectModel from "@/models/ProjectModel";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getProjectInformation } from "@/utils/queries";
+import ProjectType from "@/models/ProjectType";
 
 
-export default function Work() {
+
+export const Work = (type?: ProjectType) => {
 
     const [portProjs, setPortProjs] = useState<ProjectModel[]>([]);
+    const [dbError, setDBError] = useState("");
+    const [projFilter, setProjFilter] = useState<ProjectType>(ProjectType.All);
 
+    useEffect(() => {
+        console.log("filter = " + type);
+
+        const fetchProjects = async () => {
+            const projects: any = await getProjectInformation({ type: ProjectType.Work });
+            console.log(projects)
+            setPortProjs(projects);
+        }
+
+        fetchProjects().catch((error: any) => {
+            setDBError(error.message);
+            console.error(error.message);
+        })
+    }, []);
 
 
     return (
@@ -19,10 +38,12 @@ export default function Work() {
             <Link href="/">Back to Home</Link>
             <div className="grid grid-cols-3 grid-flow-row mx-auto">
                 {
-                portProjs.map(proj =>
-                    <ProjectDisplay project={proj} key={proj.name}/>
-                )}
+                    portProjs.map(proj =>
+                        <ProjectDisplay project={proj} key={proj.name} />
+                    )}
             </div>
         </div>
     )
 }
+
+export default Work;

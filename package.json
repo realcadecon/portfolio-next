@@ -6,12 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
     "lint": "next lint"
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
     "@rive-app/react-canvas": "^4.13.4",
+    "@vercel/blob": "^0.23.4",
     "@vercel/postgres": "^0.9.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.32.2",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18"
@@ -20,6 +25,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "drizzle-kit": "^0.23.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "postcss": "^8",
