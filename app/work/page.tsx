@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { getProjectInformation } from "@/utils/queries";
 import ProjectType from "@/models/ProjectType";
 
-export default function Work () {
+export default function Work() {
 
     const [portProjs, setPortProjs] = useState<ProjectModel[]>([]);
     const [dbError, setDBError] = useState("");
@@ -33,10 +33,9 @@ export default function Work () {
             <br />
             <Link href="/">Back to Home</Link>
             <div className="grid grid-cols-3 grid-flow-row mx-auto">
-                {
-                    portProjs.map(proj =>
-                        <ProjectDisplay project={proj} key={proj.name} />
-                    )}
+                {portProjs.map(proj =>
+                    <ProjectDisplay project={proj} key={proj.name} />
+                )}
             </div>
         </div>
     )
