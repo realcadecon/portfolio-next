@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 
 export const DeskAnim = () => {
     const { RiveComponent, rive } = useRive({
-        src: '/Rive/portfolio2.riv',
+        src: '/Rive/portfolio.riv',
         artboard: "Full Desk",
         stateMachines: "State Machine 1",
         autoplay: true,
@@ -16,6 +16,12 @@ export const DeskAnim = () => {
 
     const Input_HOVER_L = 'HoverL';
     const Input_HOVER_R = 'HoverR';
+    const Input_HOVER_Java = 'JavaHover';
+    const Input_HOVER_C = 'CHover';
+    const Input_HOVER_UE1 = 'UE1Hover';
+    const Input_HOVER_UE2 = 'UE2Hover';
+    const Input_HOVER_UE3 = 'UE3Hover';
+    const Input_HOVER_React = 'ReactHover';
 
 
     function Up_LMonitor() {
@@ -54,6 +60,16 @@ export const DeskAnim = () => {
         }
     }
 
+    function changeBooelanStateAtPath(inputName: string, val: boolean, path: string) {
+        // onHoverLeftInput.value = true;
+        if (rive != null) {
+            rive.setBooleanStateAtPath(inputName, val, path);
+        } else {
+            console.error("rive object is null",)
+        }
+    }
+
+
     useEffect(() => {
         if (rive) {
             setTimeout(() => {
@@ -84,17 +100,47 @@ export const DeskAnim = () => {
                 className='relative w-[140%]'
             />
             <TransitionLink href='/work'>
-                <div className='absolute top-[12%] left-[2%] h-[24%] w-[50%] bg-blue-800 bg-opacity-0 transition hover:translate-y-[-30%]'
+                <div className='absolute top-[38%] left-[0%] h-[15%] w-[50%] bg-blue-800 bg-opacity-50 transition hover:translate-y-[-30%]'
                     onMouseEnter={Up_LMonitor}
                     onMouseLeave={Down_LMonitor}>
                 </div>
             </TransitionLink>
             <TransitionLink href='/work'>
-                <div className='absolute top-[12%] left-[57%] h-[24%] w-[50%] bg-green-800 bg-opacity-0 transition hover:translate-y-[-30%]'
+                <div className='absolute top-[12%] left-[57%] h-[24%] w-[50%] bg-green-800 bg-opacity-50 transition hover:translate-y-[-30%]'
                     onMouseEnter={Up_RMonitor}
                     onMouseLeave={Down_RMonitor}>
                 </div>
             </TransitionLink>
+            <div className='java-book absolute top-[12%] left-[0%] h-[10%] w-[5%] bg-green-800 bg-opacity-50 transition hover:translate-y-[-30%]'
+                onMouseEnter={() => changeBooelanStateAtPath('JavaHover', true, "Bookshelf")}
+                onMouseLeave={() => changeBooelanStateAtPath('JavaHover', false, "Bookshelf")}>
+            </div>
+            <div className='c-book absolute top-[12%] left-[5%] h-[10%] w-[5%] bg-blue-800 bg-opacity-50 transition hover:translate-y-[-30%]'
+                onMouseEnter={() => changeBooelanStateAtPath('CHover', true, "Bookshelf")}
+                onMouseLeave={() => changeBooelanStateAtPath('CHover', false, "Bookshelf")}>
+            </div>
+            <div className='ue1-book absolute top-[12%] left-[10%] h-[10%] w-[5%] bg-yellow-800 bg-opacity-50 transition hover:translate-y-[-30%]'
+                onMouseEnter={() => changeBooelanStateAtPath('UE1Hover', true, "Bookshelf")}
+                onMouseLeave={() => changeBooelanStateAtPath('UE1Hover', false, "Bookshelf")}>
+            </div>
+            <div className='ue2-book absolute top-[12%] left-[15%] h-[10%] w-[5%] bg-red-800 bg-opacity-50 transition hover:translate-y-[-30%]'
+                onMouseEnter={() => changeBooelanStateAtPath('UE2Hover', true, "Bookshelf")}
+                onMouseLeave={() => changeBooelanStateAtPath('UE2Hover', false, "Bookshelf")}>
+            </div>
+            <div className='ue3-book absolute top-[12%] left-[20%] h-[10%] w-[5%] bg-purple-800 bg-opacity-50 transition hover:translate-y-[-30%]'
+                onMouseEnter={() => changeBooelanStateAtPath('UE3Hover', true, "Bookshelf")}
+                onMouseLeave={() => changeBooelanStateAtPath('UE3Hover', false, "Bookshelf")}>
+            </div>
+            <div className='ue3-book absolute top-[12%] left-[25%] h-[10%] w-[5%] bg-orange-800 bg-opacity-50 transition hover:translate-y-[-30%]'
+                onMouseEnter={() => changeBooelanStateAtPath('ReactHover', true, "Bookshelf")}
+                onMouseLeave={() => changeBooelanStateAtPath('ReactHover', false, "Bookshelf")}>
+            </div>
+            <div className='ue3-book absolute top-[12%] left-[30%] h-[10%] w-[5%] bg-lime-800 bg-opacity-50 transition hover:translate-y-[-30%]'
+                onMouseEnter={() => {
+                    if(rive!=null) 
+                        rive.fireStateAtPath('Interact', "DiplomaAB");
+                }}>
+            </div>
         </div>
     );
 
