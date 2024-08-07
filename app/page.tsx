@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <div>
       <div className='ml-auto mr-auto'>
-        <div className='fixed text-center text-green-600 bottom-[30%] left-0 right-0 -z-20 text-[15vw] leading-none font-anton_display font-extrabold'>
+        <div className='fixed text-center text-green-600 bottom-[20%] left-0 right-0 -z-20 text-[15vw] leading-none font-anton_display font-extrabold'>
           <div className='firstname'>CADE</div>
           <div className='lastname'>CONNER</div>
         </div>
