@@ -16,12 +16,6 @@ export const DeskAnim = () => {
 
     const Input_HOVER_L = 'HoverL';
     const Input_HOVER_R = 'HoverR';
-    const Input_HOVER_Java = 'JavaHover';
-    const Input_HOVER_C = 'CHover';
-    const Input_HOVER_UE1 = 'UE1Hover';
-    const Input_HOVER_UE2 = 'UE2Hover';
-    const Input_HOVER_UE3 = 'UE3Hover';
-    const Input_HOVER_React = 'ReactHover';
 
 
     function Up_LMonitor() {

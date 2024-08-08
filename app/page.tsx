@@ -5,6 +5,8 @@ import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
 import { GameTVAnim } from '@/components/GameTVAnim';
 import { DeskAnim } from '@/components/DeskAnim';
+import { AboveTVAnim } from '@/components/AboveTVAnim';
+import { GameAndFramesAnim } from '@/components/GameAndFramesAnim';
 
 gsap.registerPlugin(useGSAP);
 
@@ -31,10 +33,10 @@ export default function Home() {
           <div className='lastname'>CONNER</div>
         </div>
       </div>
-      <div className='rive fixed bottom-0 left-0 right-0 pb-[10vh]'>
+      <div className='fixed bottom-0 left-0 right-0 pb-[10vh]'>
         <div className='inner w-[25%] mx-auto relative block'>
           <DeskAnim />
-          <GameTVAnim />
+          <GameAndFramesAnim />
         </div>
       </div>
       <div className='fixed bg-green-900 w-5/6 left-[10%] bottom-[12vh] -z-10 h-1'></div>

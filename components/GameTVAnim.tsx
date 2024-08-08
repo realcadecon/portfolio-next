@@ -7,7 +7,7 @@ export const GameTVAnim = () => {
   const Input_HOVER = 'HoverTV';
 
   const { RiveComponent, rive } = useRive({
-    src: '/Rive/portfolio2.riv',
+    src: '/Rive/portfolio.riv',
     artboard: "GamingSetup",
     stateMachines: "State Machine 1",
     autoplay: true,
