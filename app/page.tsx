@@ -3,9 +3,7 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
-import { GameTVAnim } from '@/components/GameTVAnim';
 import { DeskAnim } from '@/components/DeskAnim';
-import { AboveTVAnim } from '@/components/AboveTVAnim';
 import { GameAndFramesAnim } from '@/components/GameAndFramesAnim';
 
 gsap.registerPlugin(useGSAP);

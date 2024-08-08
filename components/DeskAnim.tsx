@@ -14,48 +14,7 @@ export const DeskAnim = () => {
     }
     )
 
-    const Input_HOVER_L = 'HoverL';
-    const Input_HOVER_R = 'HoverR';
-
-
-    function Up_LMonitor() {
-        // onHoverLeftInput.value = true;
-        if (rive != null) {
-            rive.setBooleanStateAtPath(Input_HOVER_L, true, "LEFT");
-        } else {
-            console.error("rive object is null",)
-        }
-    }
-
-    function Down_LMonitor() {
-        // onHoverLeftInput.value = false;
-        if (rive != null) {
-            rive.setBooleanStateAtPath(Input_HOVER_L, false, "LEFT");
-        } else {
-            console.error("rive object is null",)
-        }
-    }
-
-    function Up_RMonitor() {
-        // onHoverLeftInput.value = true;
-        if (rive != null) {
-            rive.setBooleanStateAtPath(Input_HOVER_R, true, "RIGHT");
-        } else {
-            console.error("rive object is null",)
-        }
-    }
-
-    function Down_RMonitor() {
-        // onHoverLeftInput.value = false;
-        if (rive != null) {
-            rive.setBooleanStateAtPath(Input_HOVER_R, false, "RIGHT");
-        } else {
-            console.error("rive object is null",)
-        }
-    }
-
     function changeBooelanStateAtPath(inputName: string, val: boolean, path: string) {
-        // onHoverLeftInput.value = true;
         if (rive != null) {
             rive.setBooleanStateAtPath(inputName, val, path);
         } else {
@@ -63,24 +22,19 @@ export const DeskAnim = () => {
         }
     }
 
-
     useEffect(() => {
         if (rive) {
             setTimeout(() => {
-                Up_LMonitor();
-                console.log("up left")
+                changeBooelanStateAtPath('HoverL', true, "LEFT");
             }, 500);
             setTimeout(() => {
-                Down_LMonitor();
-                console.log("down left")
+                changeBooelanStateAtPath('HoverL', false, "LEFT");
             }, 1000);
             setTimeout(() => {
-                Up_RMonitor();
-                console.log("up right")
+                changeBooelanStateAtPath('HoverR', true, "RIGHT");
             }, 600);
             setTimeout(() => {
-                Down_RMonitor();
-                console.log("down right")
+                changeBooelanStateAtPath('HoverR', false, "RIGHT");
             }, 1100);
         }
     }, [rive]);
@@ -95,14 +49,14 @@ export const DeskAnim = () => {
             />
             <TransitionLink href='/work'>
                 <div className='absolute top-[41%] left-[0%] h-[18%] w-[48%] bg-blue-800 bg-opacity-0 transition hover:translate-y-[-29%]'
-                    onMouseEnter={Up_LMonitor}
-                    onMouseLeave={Down_LMonitor}>
+                    onMouseEnter={() => changeBooelanStateAtPath('HoverL', true, "LEFT")}
+                    onMouseLeave={() => changeBooelanStateAtPath('HoverL', false, "LEFT")}>
                 </div>
             </TransitionLink>
             <TransitionLink href='/work'>
                 <div className='absolute top-[41%] left-[49%] h-[18%] w-[48%] bg-green-800 bg-opacity-0 transition hover:translate-y-[-27%]'
-                    onMouseEnter={Up_RMonitor}
-                    onMouseLeave={Down_RMonitor}>
+                    onMouseEnter={() => changeBooelanStateAtPath('HoverR', true, "RIGHT")}
+                    onMouseLeave={() => changeBooelanStateAtPath('HoverR', false, "RIGHT")}>
                 </div>
             </TransitionLink>
             <div className='java-book absolute top-[12%] left-[74%] h-[13.5%] w-[7%] bg-green-800 bg-opacity-0 transition hover:scale-y-[130%] hover:translate-y-[-10%]'

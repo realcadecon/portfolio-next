@@ -39,7 +39,7 @@ export const GameAndFramesAnim = () => {
 
 
   return (
-    <div className='canvas-wrapper -bottom-8 absolute w-[80%] right-[-115%]'>
+    <div className='canvas-wrapper -bottom-8 absolute w-[80%] right-[-90%]'>
       <RiveComponent
         role="img"
         aria-label="Gaming"
@@ -52,7 +52,7 @@ export const GameAndFramesAnim = () => {
         }}>
       </div>
       <TransitionLink href='/about'>
-        <div className='absolute top-[7%] left-[10%] h-[23%] w-[32%] bg-lime-800 bg-opacity-0 transition'
+        <div className='absolute top-[7%] left-[10%] h-[23%] w-[32%] bg-lime-800 bg-opacity-0'
           onMouseEnter={() => {
             if (rive != null)
               rive.fireStateAtPath("InteractPortrait", "Frames");
