@@ -45,14 +45,14 @@ export const GameAndFramesAnim = () => {
         aria-label="Gaming"
         className='relative w-[120%]'
       />
-      <div className='absolute bottom-[40%] right-[12%] h-[26%] w-[35%] bg-orange-800 bg-opacity-50'
+      <div className='absolute top-[12.5%] right-[18%] h-[11%] w-[32%] bg-orange-800 bg-opacity-0'
         onMouseEnter={() => {
           if (rive != null)
             rive.fireStateAtPath("InteractResume", "Frames");
         }}>
       </div>
       <TransitionLink href='/about'>
-        <div className='absolute bottom-[24%] left-[10%] h-[60%] w-[35%] bg-lime-800 bg-opacity-50 transition'
+        <div className='absolute top-[7%] left-[10%] h-[23%] w-[32%] bg-lime-800 bg-opacity-0 transition'
           onMouseEnter={() => {
             if (rive != null)
               rive.fireStateAtPath("InteractPortrait", "Frames");
@@ -60,7 +60,7 @@ export const GameAndFramesAnim = () => {
         </div>
       </TransitionLink>
       <TransitionLink href='/work'>
-        <div className='absolute top-[15%] right-[20%] h-[40%] w-[58%] bg-blue-800 bg-opacity-50'
+        <div className='absolute top-[37%] right-[2%] h-[29%] w-[65%] bg-blue-800 bg-opacity-0'
           onMouseEnter={() => changeBooelanStateAtPath("HoverTV", true, "GamingSetup")}
           onMouseLeave={() => changeBooelanStateAtPath("HoverTV", false, "GamingSetup")}>
         </div>
