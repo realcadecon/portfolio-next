@@ -17,16 +17,16 @@ export default function About() {
                     </div>
                     <article className="text-lg text-left flex flex-col gap-6">
                         <p>
-                            Hey there! I’m a software developer with a passion for building things that work behind the scenes. Specializing in backend and full-stack development with Java, Spring Boot, React, C++, and Tailwind CSS, I enjoy bringing ideas to life and making sure everything runs smoothly under the hood.                        </p>
+                            {`Hey there! I’m a software developer with a passion for building things that work behind the scenes. Specializing in backend and full-stack development with Java, Spring Boot, React, C++, and Tailwind CSS, I enjoy bringing ideas to life and making sure everything runs smoothly under the hood.`}</p>
                         <p>
-                            When I’m not working on the next big thing, I love shifting gears to video game development using Unreal Engine 5, and diving into 3D modeling and animation with Blender and Rive, combining creativity with code.                        </p>
+                            {`When I’m not working on the next big thing, I love shifting gears to video game development using Unreal Engine 5, and diving into 3D modeling and animation with Blender and Rive, combining creativity with code.`}</p>
                         <p>
-                            But there's more to me than just tech. Away from the keyboard, you might find me playing volleyball, ice hockey, or whipping up something delicious in the kitchen. Whether it’s on the court, the rink, or with a rolling pin, I’m all about bringing a bit of creativity and energy into everything I do.
+                            {`But there's more to me than just tech. Away from the keyboard, you might find me playing volleyball, ice hockey, or whipping up something delicious in the kitchen. Whether it’s on the court, the rink, or with a rolling pin, I’m all about bringing a bit of creativity and energy into everything I do.`}
                         </p>
                         <p>
-                            This is my little corner of the internet, where I showcase the things I’ve built and what I’m passionate about.
+                           {`This is my little corner of the internet, where I showcase the things I’ve built and what I’m passionate about.`}
                         </p>
-                        <p>Take a look around, and if you like what you see, let’s connect!</p>
+                        <p>{`Take a look around, and if you like what you see, let’s connect!`}</p>
                     </article>
                 </div>
             </div>
