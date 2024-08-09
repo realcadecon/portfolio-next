@@ -15,7 +15,12 @@ const config: Config = {
         "chak_pet_display": ["Chakra Petch"],
         "anton_display": ["Anton"],
         "roboto": ["Roboto"],
-      }
+      },
+      colors: {
+        "base": "#EDF1D6",
+        "primary": "#609966",
+        "accent": "#40513B",
+      },
     },
   },
   plugins: [],

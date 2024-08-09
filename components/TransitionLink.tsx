@@ -17,7 +17,7 @@ const TransitionLink = ({ href, children }: Props) => {
     }
 
     return (
-        <button className="text-xl text-neutral-900 hover:text-neutral-500" onClick={handleClick}>
+        <button className="text-xl font-anton_display text-primary hover:text-neutral-500" onClick={handleClick}>
             {children}
         </button>
     )

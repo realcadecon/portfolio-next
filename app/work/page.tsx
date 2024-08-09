@@ -29,11 +29,11 @@ export default function Work() {
 
 
     return (
-        <div>
-            My Work Display
-            <br />
-            <TransitionLink href="/">Back to Home</TransitionLink>
-            <div className="grid md:grid-cols-2 grid-flow-row mx-auto">
+        <div className="bg-base min-h-screen">
+            <div className="text-center p-6 text-primary">
+                <TransitionLink href="/">Back to Home</TransitionLink>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 grid-flow-row mx-auto px-4">
                 {portProjs.map(proj =>
                     <ProjectDisplay project={proj} key={proj.name} />
                 )}
