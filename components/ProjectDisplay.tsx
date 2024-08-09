@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import ProjectModel from "@/models/ProjectModel"
-import { useEffect, useRef, useState } from "react";
 import gsap from "gsap"
 
 
