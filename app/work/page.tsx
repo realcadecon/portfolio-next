@@ -29,7 +29,7 @@ export default function Work() {
 
 
     return (
-        <div className="bg-base min-h-screen">
+        <div className="bg-base min-h-screen mb-10">
             <div className="text-center p-6 text-primary">
                 <TransitionLink href="/">Back to Home</TransitionLink>
             </div>
