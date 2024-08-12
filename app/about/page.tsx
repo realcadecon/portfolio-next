@@ -23,9 +23,6 @@ export default function About() {
                         <p>
                             {`But there's more to me than just tech. Away from the keyboard, you might find me playing volleyball, ice hockey, or whipping up something delicious in the kitchen. Whether it’s on the court, the rink, or with a rolling pin, I’m all about bringing a bit of creativity and energy into everything I do.`}
                         </p>
-                        <p>
-                           {`This is my little corner of the internet, where I showcase the things I’ve built and what I’m passionate about.`}
-                        </p>
                         <p>{`Take a look around, and if you like what you see, let’s connect!`}</p>
                     </article>
                 </div>
