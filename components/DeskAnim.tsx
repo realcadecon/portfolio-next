@@ -1,5 +1,4 @@
 import { useRive } from '@rive-app/react-canvas';
-import Link from 'next/link';
 import TransitionLink from './TransitionLink';
 import { useEffect } from 'react';
 
