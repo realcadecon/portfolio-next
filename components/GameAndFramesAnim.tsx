@@ -45,12 +45,12 @@ export const GameAndFramesAnim = () => {
         aria-label="Gaming"
         className='relative w-[120%]'
       />
-      <div className='absolute top-[12.5%] right-[18%] h-[11%] w-[32%] bg-orange-800 bg-opacity-0'
+      <a href="/Cade_Conner_Resume.pdf" title="download my resume" className='absolute top-[12.5%] right-[18%] h-[11%] w-[32%] bg-orange-800 bg-opacity-0'
         onMouseEnter={() => {
           if (rive != null)
             rive.fireStateAtPath("InteractResume", "Frames");
         }}>
-      </div>
+      </a>
       <TransitionLink href='/about'>
         <div className='absolute top-[7%] left-[10%] h-[23%] w-[32%] bg-lime-800 bg-opacity-0'
           onMouseEnter={() => {
