@@ -36,6 +36,45 @@ export const DeskAnim = () => {
             setTimeout(() => {
                 changeBooelanStateAtPath('HoverR', false, "RIGHT");
             }, 1100);
+            setTimeout(() => {
+                changeBooelanStateAtPath('JavaHover', true, "Bookshelf");
+            }, 600);
+            setTimeout(() => {
+                changeBooelanStateAtPath('JavaHover', false, "Bookshelf");
+            }, 1100);
+            setTimeout(() => {
+                changeBooelanStateAtPath('CHover', true, "Bookshelf");
+            }, 650);
+            setTimeout(() => {
+                changeBooelanStateAtPath('CHover', false, "Bookshelf");
+            }, 1200);
+            setTimeout(() => {
+                changeBooelanStateAtPath('UE1Hover', true, "Bookshelf");
+            }, 700);
+            setTimeout(() => {
+                changeBooelanStateAtPath('UE1Hover', false, "Bookshelf");
+            }, 1300);
+            setTimeout(() => {
+                changeBooelanStateAtPath('UE2Hover', true, "Bookshelf");
+            }, 750);
+            setTimeout(() => {
+                changeBooelanStateAtPath('UE2Hover', false, "Bookshelf");
+            }, 1400);
+            setTimeout(() => {
+                changeBooelanStateAtPath('UE3Hover', true, "Bookshelf");
+            }, 800);
+            setTimeout(() => {
+                changeBooelanStateAtPath('UE3Hover', false, "Bookshelf");
+            }, 1500);
+            setTimeout(() => {
+                changeBooelanStateAtPath('ReactHover', true, "Bookshelf");
+            }, 850);
+            setTimeout(() => {
+                changeBooelanStateAtPath('ReactHover', false, "Bookshelf");
+            }, 1600);
+            setTimeout(() => {
+                rive.fireStateAtPath('Interact', "DiplomaAB");
+            }, 700);
         }
     }, [rive]);
 

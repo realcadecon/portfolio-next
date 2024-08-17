@@ -34,6 +34,12 @@ export const GameAndFramesAnim = () => {
       setTimeout(() => {
         changeBooelanStateAtPath("HoverTV", false, "GamingSetup");
       }, 3000);
+      setTimeout(() => {
+        rive.fireStateAtPath("InteractResume", "Frames");
+      }, 500);
+      setTimeout(() => {
+        rive.fireStateAtPath("InteractPortrait", "Frames");
+      }, 500);
     }
   }, [rive]);
 
