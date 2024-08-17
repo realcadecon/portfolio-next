@@ -41,7 +41,7 @@ export const DeskAnim = () => {
 
 
     return (
-        <div className='canvas-wrapper -bottom-10 absolute w-[90%] left-[-130%]'>
+        <div className='canvas-wrapper -bottom-10 absolute w-[150%] md:w-[150%] lg:w-[90%] left-[-20%] md:left-[-130%]'>
             <RiveComponent
                 role="img"
                 aria-label="Desk Animation"
@@ -59,27 +59,27 @@ export const DeskAnim = () => {
                     onMouseLeave={() => changeBooelanStateAtPath('HoverR', false, "RIGHT")}>
                 </div>
             </TransitionLink>
-            <div className='java-book absolute top-[12%] left-[74%] h-[13.5%] w-[7%] bg-green-800 bg-opacity-0 transition hover:scale-y-[130%] hover:translate-y-[-10%]'
+            <div className='java-book absolute top-[9%] left-[74%] h-[13.5%] w-[7%] bg-green-800 bg-opacity-0 transition hover:scale-y-[130%] hover:translate-y-[-10%]'
                 onMouseEnter={() => changeBooelanStateAtPath('JavaHover', true, "Bookshelf")}
                 onMouseLeave={() => changeBooelanStateAtPath('JavaHover', false, "Bookshelf")}>
             </div>
-            <div className='c-book absolute top-[12%] left-[82%] h-[13.5%] w-[7%] bg-blue-800 bg-opacity-0 transition hover:scale-y-[130%] hover:translate-y-[-10%]'
+            <div className='c-book absolute top-[10%] left-[82%] h-[13.5%] w-[7%] bg-blue-800 bg-opacity-0 transition hover:scale-y-[130%] hover:translate-y-[-10%]'
                 onMouseEnter={() => changeBooelanStateAtPath('CHover', true, "Bookshelf")}
                 onMouseLeave={() => changeBooelanStateAtPath('CHover', false, "Bookshelf")}>
             </div>
-            <div className='ue1-book absolute top-[10%] left-[90%] h-[16%] w-[4%] bg-yellow-800 bg-opacity-0 transition hover:scale-y-[130%] hover:translate-y-[-10%]'
+            <div className='ue1-book absolute top-[8%] left-[90%] h-[16%] w-[4%] bg-yellow-800 bg-opacity-0 transition hover:scale-y-[130%] hover:translate-y-[-10%]'
                 onMouseEnter={() => changeBooelanStateAtPath('UE1Hover', true, "Bookshelf")}
                 onMouseLeave={() => changeBooelanStateAtPath('UE1Hover', false, "Bookshelf")}>
             </div>
-            <div className='ue2-book absolute top-[10%] left-[95%] h-[16%] w-[4%] bg-red-800 bg-opacity-0 transition hover:scale-y-[130%] hover:translate-y-[-10%]'
+            <div className='ue2-book absolute top-[8%] left-[95%] h-[16%] w-[4%] bg-red-800 bg-opacity-0 transition hover:scale-y-[130%] hover:translate-y-[-10%]'
                 onMouseEnter={() => changeBooelanStateAtPath('UE2Hover', true, "Bookshelf")}
                 onMouseLeave={() => changeBooelanStateAtPath('UE2Hover', false, "Bookshelf")}>
             </div>
-            <div className='ue3-book absolute top-[10%] left-[101%] h-[16%] w-[4%] bg-purple-800 bg-opacity-0 transition hover:scale-y-[130%] hover:translate-y-[-10%]'
+            <div className='ue3-book absolute top-[8%] left-[101%] h-[16%] w-[4%] bg-purple-800 bg-opacity-0 transition hover:scale-y-[130%] hover:translate-y-[-10%]'
                 onMouseEnter={() => changeBooelanStateAtPath('UE3Hover', true, "Bookshelf")}
                 onMouseLeave={() => changeBooelanStateAtPath('UE3Hover', false, "Bookshelf")}>
             </div>
-            <div className='ue3-book absolute top-[13%] left-[106%] h-[13%] w-[8%] bg-orange-800 bg-opacity-0 transition hover:scale-y-[135%] hover:translate-y-[-13%]'
+            <div className='ue3-book absolute top-[10%] left-[106%] h-[13%] w-[8%] bg-orange-800 bg-opacity-0 transition hover:scale-y-[135%] hover:translate-y-[-13%]'
                 onMouseEnter={() => changeBooelanStateAtPath('ReactHover', true, "Bookshelf")}
                 onMouseLeave={() => changeBooelanStateAtPath('ReactHover', false, "Bookshelf")}>
             </div>

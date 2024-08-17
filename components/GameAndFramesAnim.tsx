@@ -39,7 +39,7 @@ export const GameAndFramesAnim = () => {
 
 
   return (
-    <div className='canvas-wrapper -bottom-8 absolute w-[80%] right-[-90%]'>
+    <div className='canvas-wrapper hidden md:block -bottom-8 absolute md:right-[-100%] md:w-[120%] lg:w-[80%] lg:right-[-90%]'>
       <RiveComponent
         role="img"
         aria-label="Gaming"
