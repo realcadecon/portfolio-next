@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
 import { DeskAnim } from '@/components/DeskAnim';
 import { GameAndFramesAnim } from '@/components/GameAndFramesAnim';
+import { Navbar } from '@/components/Navbar';
 
 gsap.registerPlugin(useGSAP);
 
