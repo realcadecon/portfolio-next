@@ -22,7 +22,7 @@ export const ProjectDisplay: React.FC<{ project: ProjectModel }> = (props) => {
     }, {scope: container})
 
     return (
-        <a ref={container} className="relative container" href="/" onMouseEnter={() => {if(timeline) timeline.play()}} onMouseLeave={() => {if(timeline) timeline.reverse()}} onClick={() => gsap.to(".container", { display: "hidden" })}>
+        <a ref={container} className="relative container" href={portProject.link} onMouseEnter={() => {if(timeline) timeline.play()}} onMouseLeave={() => {if(timeline) timeline.reverse()}} onClick={() => gsap.to(".container", { display: "hidden" })}>
             <div className={`absolute text-white font-bold md:font-normal bottom-[3%] left-[5%] z-20 init-overlay-${portProject.id}`}>{portProject.name}</div>
             <video autoPlay playsInline loop muted className="rounded-3xl w-full object-cover" src={portProject.imgUrl}></video>
             <div className={`absolute shadow-overlay left-0 right-0 bg-gradient-to-t from-black bottom-0 h-[50%] z-10 rounded-b-3xl`}></div>

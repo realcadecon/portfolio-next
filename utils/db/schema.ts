@@ -19,6 +19,7 @@ export const projects = createTable(
         imgUrl: text('imgUrl').notNull(),
         desc: text('desc').notNull(),
         type: projectEnum('ProjEnum').default('ALL'),
+        link: text('link'),
     },
     (example) => ({
         nameIndex: index("name_idx").on(example.name),
