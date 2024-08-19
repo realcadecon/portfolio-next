@@ -6,7 +6,6 @@ export default function About() {
     return (
         <div>
             <div className="text-center p-6 text-primary">
-                <TransitionLink href="/">Back to Home</TransitionLink>
                 <div className="mt-10 flex flex-col w-[100%] md:w-[80%] lg:w-[700px] mx-auto gap-10 items-center">
                     <div className="flex gap-4 w-full justify-center">
                         <div className="w-10 flex-none bg-primary"></div>
