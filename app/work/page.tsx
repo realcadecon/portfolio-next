@@ -89,7 +89,7 @@ export default function Work() {
     }, [projFilter, techFilter]);
 
     return (
-        <div className="bg-base min-h-screen p-8 md:p-10">
+        <div className="bg-base min-h-screen p-8 md:p-10 mb-[15%]">
             <div className="flex justify-center items-center gap-3 mb-5 font-roboto">
                 <label className="font-medium">Type:</label>
                 {search === -1 ? 

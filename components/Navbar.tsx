@@ -34,33 +34,33 @@ export const Navbar = () => {
             <div className=" bg-neutral-50 p-3 rounded-full shadow-lg drop-shadow-xl text-center transition ease-in-out hover:cursor-pointer">
                 {!navActive &&
                     <svg className="hover:scale-110 rounded-full p-1" width={dim} height={dim} onClick={() => setNavActive(!navActive)} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                 }
                 {navActive &&
                     <ul className="flex flex-row md:flex-col items-center gap-3 text-center text-primary">
                         <svg className="hidden md:block hover:scale-110 rounded-full md:p-1 hover:bg-gray-300" width={dim} height={dim} onClick={() => setNavActive(!navActive)} viewBox="0 0 24 24" fill="none">
-                            <path d="M6 6L18 18M18 6L6 18" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6 6L18 18M18 6L6 18" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                         <TransitionLink href="/">
                             <svg className="transition ease-in-out hover:scale-110 rounded-full md:p-1 hover:bg-gray-300" width={dim} height={dim} viewBox="0 0 24 24" fill="none">
-                                <path d="M14 21.0001V15.0001H10V21.0001M19 9.77818V16.2001C19 17.8802 19 18.7203 18.673 19.362C18.3854 19.9265 17.9265 20.3855 17.362 20.6731C16.7202 21.0001 15.8802 21.0001 14.2 21.0001H9.8C8.11984 21.0001 7.27976 21.0001 6.63803 20.6731C6.07354 20.3855 5.6146 19.9265 5.32698 19.362C5 18.7203 5 17.8802 5 16.2001V9.77753M21 12.0001L15.5668 5.96405C14.3311 4.59129 13.7133 3.9049 12.9856 3.65151C12.3466 3.42894 11.651 3.42899 11.0119 3.65165C10.2843 3.90516 9.66661 4.59163 8.43114 5.96458L3 12.0001" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14 21.0001V15.0001H10V21.0001M19 9.77818V16.2001C19 17.8802 19 18.7203 18.673 19.362C18.3854 19.9265 17.9265 20.3855 17.362 20.6731C16.7202 21.0001 15.8802 21.0001 14.2 21.0001H9.8C8.11984 21.0001 7.27976 21.0001 6.63803 20.6731C6.07354 20.3855 5.6146 19.9265 5.32698 19.362C5 18.7203 5 17.8802 5 16.2001V9.77753M21 12.0001L15.5668 5.96405C14.3311 4.59129 13.7133 3.9049 12.9856 3.65151C12.3466 3.42894 11.651 3.42899 11.0119 3.65165C10.2843 3.90516 9.66661 4.59163 8.43114 5.96458L3 12.0001" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </TransitionLink>
                         <TransitionLink href="/about">
                             <svg className="transition ease-in-out hover:scale-110 rounded-full md:p-1 hover:bg-gray-300" width={dim} height={dim} viewBox="0 0 24 24" fill="none">
-                                <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </TransitionLink>
                         <TransitionLink href="/work" >
                             <svg className="transition ease-in-out hover:scale-110 rounded-full md:p-1 hover:bg-gray-300" width={dim} height={dim} viewBox="0 0 24 24" fill="none">
-                                <path d="M9 7H5C3.89543 7 3 7.89543 3 9V18C3 19.1046 3.89543 20 5 20H19C20.1046 20 21 19.1046 21 18V9C21 7.89543 20.1046 7 19 7H15M9 7V5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7M9 7H15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9 7H5C3.89543 7 3 7.89543 3 9V18C3 19.1046 3.89543 20 5 20H19C20.1046 20 21 19.1046 21 18V9C21 7.89543 20.1046 7 19 7H15M9 7V5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7M9 7H15" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </TransitionLink>
                         {/* <TransitionLink href="/work">
                             <svg className="transition ease-in-out hover:scale-110 p-1 rounded-full hover:bg-gray-300" width={dim} height={dim} viewBox="0 0 24 24" fill="none">
-                                <path d="M8 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V16.2C21 15.0799 21 14.5198 20.782 14.092C20.5903 13.7157 20.2843 13.4097 19.908 13.218C19.4802 13 18.9201 13 17.8 13H17.6568M11 8.34314L13.2728 6.07036C14.0648 5.27833 14.4608 4.88231 14.9175 4.73393C15.3192 4.60342 15.7519 4.60342 16.1536 4.73393C16.6102 4.88231 17.0062 5.27833 17.7983 6.07036L18.9296 7.20173C19.7217 7.99376 20.1177 8.38978 20.2661 8.84644C20.3966 9.24812 20.3966 9.68082 20.2661 10.0825C20.1177 10.5392 19.7217 10.9352 18.9296 11.7272L17.6568 13M11 8.34314V6.2C11 5.0799 11 4.51984 10.782 4.09202C10.5903 3.71569 10.2843 3.40973 9.90798 3.21799C9.48016 3 8.92011 3 7.8 3H6.2C5.0799 3 4.51984 3 4.09202 3.21799C3.71569 3.40973 3.40973 3.71569 3.21799 4.09202C3 4.51984 3 5.07989 3 6.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21H7.8C8.92011 21 9.48016 21 9.90798 20.782C10.2843 20.5903 10.5903 20.2843 10.782 19.908C10.7926 19.8872 10.8027 19.866 10.8123 19.8445M11 8.34314V17.8C11 18.8656 11 19.4243 10.8123 19.8445M17.6568 13L10.8123 19.8445M7 17H7.01" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V16.2C21 15.0799 21 14.5198 20.782 14.092C20.5903 13.7157 20.2843 13.4097 19.908 13.218C19.4802 13 18.9201 13 17.8 13H17.6568M11 8.34314L13.2728 6.07036C14.0648 5.27833 14.4608 4.88231 14.9175 4.73393C15.3192 4.60342 15.7519 4.60342 16.1536 4.73393C16.6102 4.88231 17.0062 5.27833 17.7983 6.07036L18.9296 7.20173C19.7217 7.99376 20.1177 8.38978 20.2661 8.84644C20.3966 9.24812 20.3966 9.68082 20.2661 10.0825C20.1177 10.5392 19.7217 10.9352 18.9296 11.7272L17.6568 13M11 8.34314V6.2C11 5.0799 11 4.51984 10.782 4.09202C10.5903 3.71569 10.2843 3.40973 9.90798 3.21799C9.48016 3 8.92011 3 7.8 3H6.2C5.0799 3 4.51984 3 4.09202 3.21799C3.71569 3.40973 3.40973 3.71569 3.21799 4.09202C3 4.51984 3 5.07989 3 6.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21H7.8C8.92011 21 9.48016 21 9.90798 20.782C10.2843 20.5903 10.5903 20.2843 10.782 19.908C10.7926 19.8872 10.8027 19.866 10.8123 19.8445M11 8.34314V17.8C11 18.8656 11 19.4243 10.8123 19.8445M17.6568 13L10.8123 19.8445M7 17H7.01" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </TransitionLink>
                         <TransitionLink href="/work" >
@@ -76,7 +76,7 @@ export const Navbar = () => {
                         <span className="w-0.5 h-6 md:w-full md:h-0.5 bg-black rounded-3xl md:mb-1"></span>
                         <a href="/Cade_Conner_Resume.pdf" title="Resume">
                             <svg className="transition ease-in-out hover:scale-110 rounded-full md:p-1 hover:bg-gray-300" width={dim} height={dim} viewBox="0 0 24 24" fill="none" >
-                                <path d="M19 15V21M19 21L17 19M19 21L21 19M13 3H8.2C7.0799 3 6.51984 3 6.09202 3.21799C5.71569 3.40973 5.40973 3.71569 5.21799 4.09202C5 4.51984 5 5.0799 5 6.2V17.8C5 18.9201 5 19.4802 5.21799 19.908C5.40973 20.2843 5.71569 20.5903 6.09202 20.782C6.51984 21 7.0799 21 8.2 21H14M13 3L19 9M13 3V7.4C13 7.96005 13 8.24008 13.109 8.45399C13.2049 8.64215 13.3578 8.79513 13.546 8.89101C13.7599 9 14.0399 9 14.6 9H19M19 9V11M9 17H13M9 13H15M9 9H10" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M19 15V21M19 21L17 19M19 21L21 19M13 3H8.2C7.0799 3 6.51984 3 6.09202 3.21799C5.71569 3.40973 5.40973 3.71569 5.21799 4.09202C5 4.51984 5 5.0799 5 6.2V17.8C5 18.9201 5 19.4802 5.21799 19.908C5.40973 20.2843 5.71569 20.5903 6.09202 20.782C6.51984 21 7.0799 21 8.2 21H14M13 3L19 9M13 3V7.4C13 7.96005 13 8.24008 13.109 8.45399C13.2049 8.64215 13.3578 8.79513 13.546 8.89101C13.7599 9 14.0399 9 14.6 9H19M19 9V11M9 17H13M9 13H15M9 9H10" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </a>
                     </ul>
