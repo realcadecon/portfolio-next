@@ -2,7 +2,7 @@
 
 import { ProjectDisplay } from "@/components/ProjectDisplay";
 import ProjectModel from "@/models/ProjectModel";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { getProjectInformation } from "@/utils/queries";
 import ProjectType from "@/models/ProjectType";
 import Select, { MultiValue } from "react-select"
@@ -36,6 +36,7 @@ export default function Work() {
 
     const searchParams = useSearchParams();
     const paramValue = searchParams.get("type");
+    
 
 
     const handleProjChange = (newValues: MultiValue<{ value: ProjectType; label: string; }>) => {

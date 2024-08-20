@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Navbar } from "@/components/Navbar";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-base`}>
         <Navbar />
+        <Suspense>
         {children}
+        </Suspense>
         <SpeedInsights />
       </body>
     </html>
