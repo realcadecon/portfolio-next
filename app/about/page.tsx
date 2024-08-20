@@ -1,7 +1,5 @@
 "use client"
 
-import TransitionLink from "@/components/TransitionLink";
-
 export default function About() {
     return (
         <div>
@@ -16,7 +14,7 @@ export default function About() {
                     </div>
                     <article className="text-lg text-left flex flex-col gap-6">
                         <p>
-                            {`Hey there! I’m a software developer with a passion for building things that work behind the scenes. Specializing in backend and full-stack development with Java, Spring Boot, React, C++, and Tailwind CSS, I enjoy bringing ideas to life and making sure everything runs smoothly under the hood.`}</p>
+                            {`Hey there! I’m a software developer with a passion for building cool and unique things. Specializing in backend and full-stack development with Java, Spring Boot, React, C++, and Tailwind CSS, I enjoy bringing ideas to life and making sure everything runs smoothly under the hood.`}</p>
                         <p>
                             {`When I’m not working on the next big thing, I love shifting gears to video game development using Unreal Engine 5, and diving into 3D modeling and animation with Blender and Rive, combining creativity with code.`}</p>
                         <p>

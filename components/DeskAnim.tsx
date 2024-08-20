@@ -79,7 +79,7 @@ export const DeskAnim = () => {
 
 
     return (
-        <div className='canvas-wrapper -bottom-10 absolute w-[150%] md:w-[150%] lg:w-[90%] left-[-20%] md:left-[-130%]'>
+        <div className='canvas-wrapper -bottom-0 absolute w-[150%] md:w-[150%] lg:w-[90%] left-[-20%] md:left-[-130%]'>
             <RiveComponent
                 role="img"
                 aria-label="Desk Animation"
