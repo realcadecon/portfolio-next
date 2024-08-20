@@ -85,13 +85,13 @@ export const DeskAnim = () => {
                 aria-label="Desk Animation"
                 className='relative w-[140%]'
             />
-            <TransitionLink href='/work'>
+            <TransitionLink href='/work?type=side'>
                 <div className='absolute top-[41%] left-[0%] h-[18%] w-[48%] bg-blue-800 bg-opacity-0 transition hover:translate-y-[-29%]'
                     onMouseEnter={() => changeBooelanStateAtPath('HoverL', true, "LEFT")}
                     onMouseLeave={() => changeBooelanStateAtPath('HoverL', false, "LEFT")}>
                 </div>
             </TransitionLink>
-            <TransitionLink href='/work'>
+            <TransitionLink href='/work?type=work'>
                 <div className='absolute top-[41%] left-[49%] h-[18%] w-[48%] bg-green-800 bg-opacity-0 transition hover:translate-y-[-27%]'
                     onMouseEnter={() => changeBooelanStateAtPath('HoverR', true, "RIGHT")}
                     onMouseLeave={() => changeBooelanStateAtPath('HoverR', false, "RIGHT")}>

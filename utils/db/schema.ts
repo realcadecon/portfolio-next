@@ -1,12 +1,10 @@
 import {
     index,
-    pgEnum,
     pgTableCreator,
     serial,
     text,
 } from 'drizzle-orm/pg-core';
 
-export const projectEnum = pgEnum('ProjType', ['ALL', 'GAME', 'WORK', 'SIDE']);
 
 export const createTable = pgTableCreator((name) => `portfolio_${name}`);
 
@@ -18,8 +16,9 @@ export const projects = createTable(
         name: text('name').notNull(),
         imgUrl: text('imgUrl').notNull(),
         desc: text('desc').notNull(),
-        type: projectEnum('ProjEnum').default('ALL'),
+        type: text('projEnum').notNull(),
         link: text('link'),
+        tech: text('tech').array()
     },
     (example) => ({
         nameIndex: index("name_idx").on(example.name),

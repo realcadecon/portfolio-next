@@ -64,7 +64,7 @@ export const GameAndFramesAnim = () => {
           }}>
         </div>
       </TransitionLink>
-      <TransitionLink href='/work'>
+      <TransitionLink href='/work?type=games'>
         <div className='absolute top-[37%] right-[2%] h-[29%] w-[65%] bg-blue-800 bg-opacity-0'
           onMouseEnter={() => changeBooelanStateAtPath("HoverTV", true, "GamingSetup")}
           onMouseLeave={() => changeBooelanStateAtPath("HoverTV", false, "GamingSetup")}>

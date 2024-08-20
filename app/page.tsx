@@ -10,20 +10,7 @@ import { Navbar } from '@/components/Navbar';
 gsap.registerPlugin(useGSAP);
 
 export default function Home() {
-
-  const container = useRef();
-
-  useGSAP(
-    () => {
-      var tl = gsap.timeline();
-      tl.to(".firstname", { x: 100, duration: 1, ease: 'back.inOut' })
-        .to(".lastname", { x: -100, duration: 1, ease: 'back.inOut' }, "0");
-    },
-    { scope: container }
-  );
-
   
-
   return (
     <div>
       <div className='ml-auto mr-auto'>
