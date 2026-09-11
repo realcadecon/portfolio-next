@@ -8,8 +8,7 @@ export default defineConfig ({
   out: "./drizzle",
   dialect: "postgresql",
   dbCredentials: {
-    // url: process.env.POSTGRES_URL!,
-    url: "postgres://default:xOCW3To4EeNU@ep-gentle-dust-a4v4v2qf-pooler.us-east-1.aws.neon.tech/verceldb?sslmode=require"
+    url: process.env.POSTGRES_URL!,
   },
   tablesFilter: ["portfolio_*"],
 })
